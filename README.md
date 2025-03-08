@@ -16,6 +16,7 @@
 - SWITCHED to new 5G WiFi network NETGEAR-41-5G
 - SNAPPED pics of progress and TEXTED to MCV
 - SAVE | COMMIT | PUSH to github.com
+- CALLED Netgear...
 
 ## 2025 03 07 MV:
 - BEGAN self-study
