@@ -11,6 +11,11 @@
 - pip install opencv-python (contains CV2) => successful
 - pip install apriltag => successful 
 - SAVE | COMMIT | PUSH to github.com
+- INSTALLED NEW WIFI ROUTER in house Netgear Nighthawk 
+- UPDATED VSC on RPi using following download (for ARM64): https://update.code.visualstudio.com/latest/linux-deb-arm64/stable
+- SWITCHED to new 5G WiFi network NETGEAR-41-5G
+- SNAPPED pics of progress and TEXTED to MCV
+- SAVE | COMMIT | PUSH to github.com
 
 ## 2025 03 07 MV:
 - BEGAN self-study
