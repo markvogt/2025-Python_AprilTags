@@ -32,8 +32,7 @@ def plotPoint(image, center, color):
 # plot a little text
 def plotText(image, center, color, text):
     center = (int(center[0]) + 4, int(center[1]) - 4)
-    return cv2.putText(image, str(text), center, cv2.FONT_HERSHEY_SIMPLEX,
-                       1, color, 3)
+    return cv2.putText(image, str(text), center, cv2.FONT_HERSHEY_SIMPLEX, 1, color, 3)
 
 # setup and the main loop
     
@@ -53,13 +52,39 @@ options = apriltag.DetectorOptions(families='tag16h5',
     
 detector = apriltag.Detector(options=options)
 
-cam = cv2.VideoCapture(0)
+
+# INSTANTIATE a "camera" object connected to the built-in "legacy" ribbon cable on RPis (port 0)...
+# cam = cv2.VideoCapture(0)
+# INSTANTIATE a "camera" object connected to the USB3 serial port on RPis (port 1?)...
+cam = cv2.VideoCapture(1)
+
+
+
+
+if not cam.isOpened():
+    print("Error: Could not access the camera.")
+else:
+    print("Camera is ready!")
 
 looping = True
 
 while looping:
     result, image = cam.read()
-    grayimg = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+
+    if not result or image is None:
+        print("Error: Failed to capture a valid frame.")
+        break
+
+    print(f"Image shape: {image.shape if image is not None else 'None'}")
+
+
+    try:
+        grayimg = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    except Exception as ex: 
+        print(f"ERROR converting image to grayscale > ex = {ex}...")
+
+
 	# look for tags
     detections = detector.detect(grayimg)
     if not detections:

@@ -16,7 +16,21 @@
 - SWITCHED to new 5G WiFi network NETGEAR-41-5G
 - SNAPPED pics of progress and TEXTED to MCV
 - SAVE | COMMIT | PUSH to github.com
-- CALLED Netgear...
+- SWITCHED CAMERAS !!! 
+- - LEFT the "legacy" camera installed (port 0, not returning valid frames)
+- - INSTALLED ordinary USB web cap (kind that clips onto laptop lid or top edge of external display) onto RPi's only USB3 port; 
+- - CONFIGURED code so cam = cv2.VideoCapture(1)
+- ADDED some additional exception-handling (really exception-printing is all) code just after cam.read()
+- RAN Apriltag_video.py using VSC's RUN button
+- => WORKING !!!!! 
+- - a small pop-up window displays with a near-streaming picture first of whatever the CAMERA SEES, then IF there are AprilTags (ok to have SEVERAL) then it will: 
+- - - DETECT each tag; 
+- - - DRAW small green squares on the CORNERS of each AprilTag to PROVE that it UNDERSTANDS WHERE these corners ARE; and 
+- - - DRAW the TAG ID in the CENTER of each AprilTag to PROVE that it UNDERSTANDS WHERE this center is as well ! 
+- DEMO-ed to Michael
+- UPDATED README
+- SAVE | COMMIT | PUSH to github.com 
+- PAUSED for the evening - need to R&D how to use this capability to help a DRONE carrying a 10 lb PAYLOAD LAND on a MOVING BOAT and MOVE VEHICLE !
 
 ## 2025 03 07 MV:
 - BEGAN self-study
