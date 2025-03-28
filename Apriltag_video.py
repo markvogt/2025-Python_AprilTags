@@ -55,10 +55,8 @@ detector = apriltag.Detector(options=options)
 
 # INSTANTIATE a "camera" object connected to the built-in "legacy" ribbon cable on RPis (port 0)...
 # cam = cv2.VideoCapture(0)
-# INSTANTIATE a "camera" object connected to the USB3 serial port on RPis (port 1?)...
-cam = cv2.VideoCapture(1)
-
-
+# INSTANTIATE a "camera" object connected to the USB3 serial port on RPis (port 1 if ribbon camera PRESENT, port 0 if ONLY camera connected)...
+cam = cv2.VideoCapture(0)
 
 
 if not cam.isOpened():

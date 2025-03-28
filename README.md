@@ -1,5 +1,22 @@
 # MARK'S JOURNAL
 
+## 2025 03 27 MV: 
+- CONTINUED self-study
+- FOUND BETTER video series to follow RE: how to connect Pixhawk 2.4.8 flight controller to RPi4 
+- using Pixhawk Telemetry1 connector to 3-wires on RPi4's GPIO pin block!
+- REFERENCE: https://www.youtube.com/watch?v=nIuoCYauW3s&t=6s  (watched on Rpi w NO audio; lip-read and read video description notes)
+- ORDERED set of pixhawk telemetry connector-to-GPIO female pins on Amazon
+- CONNECTED 6-pin connector to pixhawk Telemetry2 connector
+- CONNECTED BLK wire to RPi GPIO GND (pin 9)
+- CONNECTED WHT wire (Tx) to RPi GPIO Rx (pin 10)
+- CONNECTED BLU wire (Rx) to RPi GPIO Tx (pin 8)
+- TRIED powering Pixhawk by connecting RED wire (5V) to RPi GPIO 5V (pin 2) => NOTHING HAPPENED; Pixhawk DIDN'T POWER ON
+- TRIED powering Pixhawk by connecting mini-USB to RPi USB3 (blue USB) => SUCCESS 1 Pixhawk IMMEIDATELY POWERED ON ! :-) 
+- UPDATED readme
+- SAVED | COMMITTED | PUSHED 
+
+
+
 ## 2025 03 08 MV: 
 - CONTINUED self-study
 - CREATED env ".venv"
