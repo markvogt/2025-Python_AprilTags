@@ -1,3 +1,5 @@
 cmake
 opencv-python
 apriltag
+PyYAML
+mavproxy

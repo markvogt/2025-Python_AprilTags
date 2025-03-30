@@ -1,5 +1,30 @@
 # MARK'S JOURNAL
 
+## 2025 03 28 MV: 
+- CONTINUED efforts to get Pixhawk 2.4.8 flight controller integrated with RPi (still installing code)
+- NOTE: it appears that even when adhering to the best practice of employing python VIRTUAL ENVIRONMENTS (mine is /.venv/) there are STILL python packages which MUST also be installed at the SYSTEM/default/OS level, using "sudo apt-get install <package name>  - very confusing, except if you consider that these contain C++ code that must be BUILT for a SPECIFIC PLATFORM, and then the regular-schmegular python packages in /.venv/ EXPECT these system-level packages to be present ? 
+- DELETED virtual environment /.venv - ONLY USING SYSTEM install of python !!! 
+- REPEATED all package installs (including sudo apt-get installs of platform-specific packages) per the video listed in 2025 03 27
+
+- REFERENCE: INSTALLED following packages using the exact commands provided ONE AT A TIME: 
+-    Raspberry Pi:
+-    $ sudo raspi-config
+-    $ sudo nano /boot/config.txt
+-    $ sudo reboot
+-    $ sudo apt-get update
+-    $ sudo apt-get install python3-pip
+-    $ sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-matplotlib python3-lxml libxml2-dev libxslt-dev
+-    $ sudo pip install PyYAML mavproxy
+-    $ sudo mavproxy.py --master=/dev/ttyAMA0
+
+- TRIED running > sudo mavproxy.py --master=/dev/tty/AMA0
+- => UNSUCCESSFUL :-( threw errors 
+- TRIED simply running mavproxy.py  (hoping it could AUTO-DETECT the presence of a flight controller)
+- => SUCCESSFUL !!! detected the Pixhawk on "line 0" 
+- UPDATED readme 
+- SAVED | COMMITTED | PUSHED
+
+
 ## 2025 03 27 MV: 
 - CONTINUED self-study
 - FOUND BETTER video series to follow RE: how to connect Pixhawk 2.4.8 flight controller to RPi4 
@@ -11,10 +36,34 @@
 - CONNECTED WHT wire (Tx) to RPi GPIO Rx (pin 10)
 - CONNECTED BLU wire (Rx) to RPi GPIO Tx (pin 8)
 - TRIED powering Pixhawk by connecting RED wire (5V) to RPi GPIO 5V (pin 2) => NOTHING HAPPENED; Pixhawk DIDN'T POWER ON
-- TRIED powering Pixhawk by connecting mini-USB to RPi USB3 (blue USB) => SUCCESS 1 Pixhawk IMMEIDATELY POWERED ON ! :-) 
+- DISCONNECTED my "Coral" USB-connecte external GPU (running non-stop for MORE THAN 2 YEARS NOW) from USB3 port of RPi
+- CONNECTED Pixhawk by connecting mini-USB to RPi USB3 (blue USB) 
+- => SUCCESS !!! Pixhawk IMMEIDATELY POWERED ON ! :-) 
 - UPDATED readme
 - SAVED | COMMITTED | PUSHED 
-
+- CHARGED new RUNCAM6 sports cam from Michael 
+- UNINSTALLED existing USB webcam (LogiTech) from USB port of RPi
+- INSTALLED RUNCAM6 into RPi USB2 port using provided USB-micro to USB-A 10 inch cable 
+- LEFT CAM port set to 0 since STILL the ONLY camera connected
+- RAN Apriltag_video.py using VSC "run" button
+- => WORKING !!!!
+- PAUSED for few hours (tennis break on a Friday afternoon/evening)
+- CONTINUED with Pixhawk-to-RPi integration
+- CONTINUED installation of various python modules into virtual env  /.venv 
+- REALIZED I MIGHT have been installing much of what's required into the SYSTEM install of PYTHON3 :-O !!! 
+- - pip list on /.venv shows only about 7 packages installed :-( 
+- - pip list in OS terminal windows (NOT integrated terminal in VSC) shows DOZENS of packages installed :-O !!! 
+- WHAT TO DO ???
+- HOW BEST TO PROCEED ??? 
+- DECISION: continue install of remaining packages into but /.venv  (virtual environment - NOT system/default env)
+- performed (.venv) > pip install PyYAML
+- => SUCCESSFULLY installed in (.venv)!
+- performed (.venv) > pip install mavproxy
+- => SUCCESSFULLY instlled in (.venv) ! - INCLUDING all auto-detected DEPENDENCIES (but not those mentioned in the video???)
+- IMPORTANT NOTE: sudo pip install performs a SYSTEM install and throws EXCEPTTIOS; regular-schmegular (.venv) pip install <packages> works!
+-- performed (.venv) > pip install wxPython in lieu of SYSTEM install of python3-wxgtk4.0
+- => ERRORS; but (.venv) > pip list shows wxPython IS installed !!! 
+- PAUSED for evening
 
 
 ## 2025 03 08 MV: 
