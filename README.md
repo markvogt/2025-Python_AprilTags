@@ -1,5 +1,25 @@
 # MARK'S JOURNAL
 
+## 2025 04 06 MV: 
+- CONTINUED effort
+- RESEARCHED "DroneKit" vs "MAVSDK"
+- - BOTH are SDKs for MAXPROXY/MAVLINK - easy-to-use ABSTRACTIONS on top of difficult MAVProxy and MORE difficult MAVLink
+- - DroneKit came out 2 year earlier (circa 2015 - by 3DR, the creators of ARUPILOT flightcontroller software and its APM flightcontroller hardware
+- - MAVSDK and MAVSDK-Python came out circa 2019 by the MAVLink Project (creators of MAVLink, mavlink.org) to work with ARDUPILOT/APM and with PXR/Pixhawk 
+- DECIDED to try & use MAVSDK FIRST for the UTC, before resortng to DroneKit
+- REFERENCES: 
+- - https://mavsdk.mavlink.io/main/en/index.html
+- - https://mavsdk.mavlink.io/main/en/python/quickstart.html
+- - https://github.com/mavlink/MAVSDK-Python
+- - https://github.com/jonasvautherin/px4-gazebo-headless
+- INSTALLED MAVSDK on RPi via $> pip3 install mavsdk 
+- => SUCCESSFUL (no errors)
+- INSTALLED aioconsole on RPi via $> pip3 install aioconsole
+- => 
+
+
+
+
 ## 2025 04 01 MV: 
 - CONTINUED effort
 - BUILT a small POC using python "playsound" package 
