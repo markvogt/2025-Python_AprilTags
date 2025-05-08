@@ -1,5 +1,23 @@
 # MARK'S JOURNAL
 
+## 2025 05 07 MV: 
+- CONTINUED effort
+- RESEARCHED other NEWER libraries implementing AprilTags
+- DISCOVERD pupil_apriltags as being NEWEST (2025) opted to test-drive THIS one... 
+- INSTALLED pupil_apriltags via C$> pip install pupil_apriltags
+- => SUCCESSFUL
+
+
+
+## 2025 05 02 MV: 
+- CONTINUED effort after working for past several WEEKS on other code
+- STARTED camera (VERY IMPORTANT !!!)
+- OPENED file Apriltag_video.py in editor
+- RAN Apriltag_video.py using VSC's RUN button
+- => WORKING !!! saw image, but didn't have any actual April Tags on me... 
+- SAVED | COMMITTED | PUSHED
+- PAUSED for the evening
+
 ## 2025 04 06 MV: 
 - CONTINUED effort
 - RESEARCHED "DroneKit" vs "MAVSDK"
